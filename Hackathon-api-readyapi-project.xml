@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1e4112de-05b7-4d98-aa50-dfea555491d5" created="3.1.0" activeEnvironment="Default environment" name="Hackathon-api" updated="3.1.0 2020-02-04T16:09:20Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="550ef823-d6a9-4a2f-a608-9030eeaf038f" wadlVersion="http://wadl.dev.java.net/2009/02" name="get user" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8088</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Users" path="/api/v2/users" id="870af891-97e1-4d8d-8330-5cdf729594c3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Users" id="9ce615bf-e48b-402f-801d-7a020ed9ae35" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:user="http://35.188.114.237/api/v2/users">user:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="491793a8-983a-4655-94fa-885f8e8eea1a" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-Type" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:endpoint>http://35.188.114.237:8088</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://35.188.114.237/api/v2/users</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="4b8094c5-c68d-448b-be7e-383212656fb6" wadlVersion="http://wadl.dev.java.net/2009/02" name="add user" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8088</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Addusers" path="/api/v2/addusers" id="2c6fe28e-ac5c-4a4d-8d2e-d28c9c2f2011">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Addusers" id="d2bf1c7e-7261-48cf-8873-178fabd7b4a8" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:add="http://35.188.114.237/api/v2/addusers">add:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:add="http://35.188.114.237/api/v2/addusers">add:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="500ace95-2952-4231-aac0-f05cd471e697" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8088</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/api/v2/addusers</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="f5d4a0fa-392a-44c6-99fa-8d8bea8e1cee" wadlVersion="http://wadl.dev.java.net/2009/02" name="updateuser" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8088</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Updateuser" path="/api/v2/updateuser" id="b2adc82f-aa9e-4c1d-b66d-3a3ab44101ed">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Updateuser" id="b5e11d38-b898-4af5-b7c1-71de1bfef964" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:upd="http://35.188.114.237/api/v2/updateuser">upd:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="ac99695b-ee38-4678-b2e2-8426bfe2e73d" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8088</con:endpoint>
+          <con:request>'{
+"id":15,
+"name":"Adam",
+"surname":"Sindler",
+"adress":"New York"
+}'</con:request>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="2a82cf84-3f8c-4c4a-9a8a-1a770fc14beb" wadlVersion="http://wadl.dev.java.net/2009/02" name="deleteandupdate" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost:8088</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Deleteuser" path="/api/v2/{id}/deleteuser" id="1fff697a-7532-43a3-9a31-1a736bb76c54">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>id</con:name>
+          <con:value>9</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>9</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Deleteuser" id="87c59677-efdc-4825-9506-c6ac2c319e2f" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:del="http://35.188.114.237/api/v2/9/deleteuser">del:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>404 405</con:status>
+          <con:params/>
+          <con:element xmlns:del="http://35.188.114.237/api/v2/9/deleteuser">del:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Delete" id="2f4b06d5-7fe9-4274-a9f0-6d466e2a8e39" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8088</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="041f961e-96e7-46d9-a480-2dbebf02e539" name="Hackathon">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="8bd5362c-5b49-472c-a6ac-7a1aa2d928fa" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="getusers" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="8ef076a2-3c59-4122-b500-f6263d6f5a59">
+        <con:settings/>
+        <con:config service="get user" resourcePath="/api/v2/users" methodName="Users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="491793a8-983a-4655-94fa-885f8e8eea1a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-type" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://35.188.114.237:8088</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://35.188.114.237/api/v2/users</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="e8c1d530-9dba-4a75-93a9-3b256ebcbe71" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="0137728c-ed0f-4d11-aafd-e6effed99622" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Add_update_delete" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="adduser" id="d5edc682-07fb-4c6e-975f-1111a95dd57d">
+        <con:settings/>
+        <con:config service="add user" resourcePath="/api/v2/addusers" methodName="Addusers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="adduser" id="500ace95-2952-4231-aac0-f05cd471e697" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-type" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://35.188.114.237:8088</con:endpoint>
+            <con:request>{
+"name":" jagadeesh",
+"surname":"madhura",
+"adress":"Bangalore"
+}'</con:request>
+            <con:originalUri>http://35.188.114.237/api/v2/addusers</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="7cc597ac-8f5c-4f38-8235-ab5f94f0c90a" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>30</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:name[1]</con:xpath>
+                  <con:element>name</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Adam</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:surname[1]</con:xpath>
+                  <con:element>surname</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Sindler</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:adress[1]</con:xpath>
+                  <con:element>adress</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Boston</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://35.188.114.237/api/v2/addusers">
+   <id>30</id>
+   <name>Adam</name>
+   <surname>Sindler</surname>
+   <adress>Boston</adress>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="e3bb78fb-ceb2-4111-a8c1-b6affe1c2d48" name="Message Content Assertion 2">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>40</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:name[1]</con:xpath>
+                  <con:element>name</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>jagadeesh</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:surname[1]</con:xpath>
+                  <con:element>surname</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>madhura</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/addusers';
+//ns1:Response[1]/ns1:adress[1]</con:xpath>
+                  <con:element>adress</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Bangalore</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://35.188.114.237/api/v2/addusers">
+   <id>40</id>
+   <name>jagadeesh</name>
+   <surname>madhura</surname>
+   <adress>Bangalore</adress>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="60f2f412-9a6a-4297-8c74-c8fb02932fdc">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>id</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>adduser</con:sourceStep>
+            <con:sourcePath>$['id']</con:sourcePath>
+            <con:targetType>id</con:targetType>
+            <con:targetStep>Properties-user</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Update user" id="f65fae43-d160-42ef-9ade-055898f67242">
+        <con:settings/>
+        <con:config service="updateuser" resourcePath="/api/v2/updateuser" methodName="Updateuser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Update user" id="ac99695b-ee38-4678-b2e2-8426bfe2e73d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Content-type" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>http://35.188.114.237:8088</con:endpoint>
+            <con:request>{
+"id":15,
+"name":"jagadeesh-updated",
+"surname":"madhura-updated",
+"adress":"Tirupati"
+}</con:request>
+            <con:originalUri>http://35.188.114.237/api/v2/updateuser</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="093a082c-6a9f-4e91-9643-1b3f206fbb3b" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="00216d5b-3ea4-4a40-9cc2-c0b5bea77c5e" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/updateuser';
+//ns1:Response[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>15</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/updateuser';
+//ns1:Response[1]/ns1:name[1]</con:xpath>
+                  <con:element>name</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>jagadeesh-updated</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/updateuser';
+//ns1:Response[1]/ns1:surname[1]</con:xpath>
+                  <con:element>surname</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>madhura-updated</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://35.188.114.237/api/v2/updateuser';
+//ns1:Response[1]/ns1:adress[1]</con:xpath>
+                  <con:element>adress</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Tirupati</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://35.188.114.237/api/v2/updateuser">
+   <id>15</id>
+   <name>jagadeesh-updated</name>
+   <surname>madhura-updated</surname>
+   <adress>Tirupati</adress>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="attempt to delete invalid user" id="d0f98d69-fc6e-4bf9-884d-deefcc1f8e7f">
+        <con:settings/>
+        <con:config service="deleteandupdate" resourcePath="/api/v2/{id}/deleteuser" methodName="Deleteuser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="attempt to delete invalid user" id="2f4b06d5-7fe9-4274-a9f0-6d466e2a8e39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://35.188.114.237:8088</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/api/v2/9/deleteuser</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="e428dd00-d1c6-4169-a434-ebff8ba2a585" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:status[1]</con:xpath>
+                  <con:element>status</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>NOT_FOUND</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:year[1]</con:xpath>
+                  <con:element>year</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2020</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:month[1]</con:xpath>
+                  <con:element>month</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>JUNE</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:monthValue[1]</con:xpath>
+                  <con:element>monthValue</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>6</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:dayOfMonth[1]</con:xpath>
+                  <con:element>dayOfMonth</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>20</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:hour[1]</con:xpath>
+                  <con:element>hour</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>10</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:minute[1]</con:xpath>
+                  <con:element>minute</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>25</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:second[1]</con:xpath>
+                  <con:element>second</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>34</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:nano[1]</con:xpath>
+                  <con:element>nano</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>330000000</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:dayOfWeek[1]</con:xpath>
+                  <con:element>dayOfWeek</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>SATURDAY</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:dayOfYear[1]</con:xpath>
+                  <con:element>dayOfYear</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>172</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:chronology[1]/ns1:calendarType[1]</con:xpath>
+                  <con:element>calendarType</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>iso8601</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:timestamp[1]/ns1:chronology[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>ISO</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:message[1]</con:xpath>
+                  <con:element>message</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>User was not found for parameters {Id not found=10000}Error in Id/Entity</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:debugMessage[1]</con:xpath>
+                  <con:element>debugMessage</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:debugMessage[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:subErrors[1]</con:xpath>
+                  <con:element>subErrors</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Fault[1]/ns1:apierror[1]/ns1:subErrors[1]/@null</con:xpath>
+                  <con:element>@null</con:element>
+                  <con:type/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Fault xmlns="http://localhost/api/v2/9/deleteuser">
+   <apierror>
+      <status>NOT_FOUND</status>
+      <timestamp>
+         <year>2020</year>
+         <month>JUNE</month>
+         <monthValue>6</monthValue>
+         <dayOfMonth>20</dayOfMonth>
+         <hour>10</hour>
+         <minute>25</minute>
+         <second>34</second>
+         <nano>330000000</nano>
+         <dayOfWeek>SATURDAY</dayOfWeek>
+         <dayOfYear>172</dayOfYear>
+         <chronology>
+            <calendarType>iso8601</calendarType>
+            <id>ISO</id>
+         </chronology>
+      </timestamp>
+      <message>User was not found for parameters {Id not found=10000}Error in Id/Entity</message>
+      <debugMessage null="true"/>
+      <subErrors null="true"/>
+   </apierror>
+</Fault>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="10000"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="Properties-user" id="1ccdd35f-20ec-4e80-bac9-00579cc2b717">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>id</con:name>
+              <con:value>57</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="delete valid user" id="40e27a7a-121e-43ce-a4ab-c70d2bc14000">
+        <con:settings/>
+        <con:config service="deleteandupdate" resourcePath="/api/v2/{id}/deleteuser" methodName="Deleteuser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="delete valid user" id="2f4b06d5-7fe9-4274-a9f0-6d466e2a8e39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://35.188.114.237:8088</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/api/v2/9/deleteuser</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="f273045f-cfe0-47ee-9484-ffd61a5b62e0" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Response[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>57</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Response[1]/ns1:name[1]</con:xpath>
+                  <con:element>name</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>jagadeesh</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Response[1]/ns1:surname[1]</con:xpath>
+                  <con:element>surname</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>madhura</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='http://localhost/api/v2/9/deleteuser';
+//ns1:Response[1]/ns1:adress[1]</con:xpath>
+                  <con:element>adress</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Bangalore</con:expectedValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="http://localhost/api/v2/9/deleteuser">
+   <id>57</id>
+   <name>jagadeesh</name>
+   <surname>madhura</surname>
+   <adress>Bangalore</adress>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="${Properties-user#id}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>1ccdd35f-20ec-4e80-bac9-00579cc2b717</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
